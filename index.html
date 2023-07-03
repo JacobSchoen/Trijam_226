@@ -1,24 +1,40 @@
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Trijam #226 || Catastrophic Cauldron</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
-        <link href="styles/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <main>
-            <canvas id="gameCanvas"></canvas>
-        </main>
-       
-        <footer>
-            Created By: Jacob Schoen // check me out at <a href="https://jacobschoen.github.io/Portfolio/">Here</a>
-        </footer>
-        <script src="scripts/inputHandler.js"></script>
-        <script src="scripts/classes.js"></script>
-        <script src="scripts/main.js"></script>
-        
+  <head>
+    <meta charset="utf-8" />
+    <title>Trijam #226 || Math Attack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="gameBoy">
+        <div class="gameBoy__header">
+          <div id="timer">0</div>
+          <span class="gameBoy__power">POWER <span class="led"></span></span>
+        </div>
+        <div id="game" class="gameBoy__gameBezel">
+          <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="gameBoy__highScore">
+          HighScore:
+          <span id="highScore">0</span>
+        </div>
+      </div>
+    </main>
 
-    </body>
+    <footer>
+      Created By: Jacob Schoen // check me out at
+      <a href="https://jacobschoen.github.io/Portfolio/">Here</a>
+    </footer>
+    <script src="scripts/inputHandler.js"></script>
+    <script src="scripts/classes.js"></script>
+    <script src="scripts/title.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gameOver.js"></script>
+  </body>
 </html>

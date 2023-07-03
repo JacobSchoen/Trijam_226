@@ -1,13 +1,25 @@
-addEventListener("keydown", function (e) {
-  if (e.code == "KeyD") vx = 5;
-  if (e.code == "KeyA") vx = -5;
-  if (e.code == "KeyS") vy = 5;
-  if (e.code == "KeyW") vy = -5;
-});
+function setupInputs() {
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "w" || event.key === "ArrowUp") {
+      upKey = true;
+    } else if (event.key === "a" || event.key === "ArrowLeft") {
+      leftKey = true;
+    } else if (event.key === "s" || event.key === "ArrowDown") {
+      downKey = true;
+    } else if (event.key === "d" || event.key === "ArrowRight") {
+      rightKey = true;
+    }
+  });
 
-addEventListener("keyup", function (e) {
-  if (e.code == "KeyD") vx = 0;
-  if (e.code == "KeyA") vx = 0;
-  if (e.code == "KeyW") vy = 0;
-  if (e.code == "KeyS") vy = 0;
-});
+  document.addEventListener("keyup", function (event) {
+    if (event.key === "w" || event.key === "ArrowUp") {
+      upKey = false;
+    } else if (event.key === "a" || event.key === "ArrowLeft") {
+      leftKey = false;
+    } else if (event.key === "s" || event.key === "ArrowDown") {
+      downKey = false;
+    } else if (event.key === "d" || event.key === "ArrowRight") {
+      rightKey = false;
+    }
+  });
+}
