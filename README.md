@@ -13,7 +13,7 @@ The player is a blue orb that will grow in size with its health.
 Your score is calculated by how long you live for. You health starts at 1 but green positive orbs give you more health while red orbs take away health.
 
 # Controls
-use WASD or arrow keys to move your orb around the game screen 
+Use WASD or arrow keys to move your orb around the game screen 
 
 # Built With
 * Vanilla JS
@@ -21,10 +21,8 @@ use WASD or arrow keys to move your orb around the game screen
 * VS Code
 
 # Future development wants
------
-* player not able to travel outside game screen
-* Player collision to be more accurate on larger sizes
------
+* ```player not able to travel outside game screen```
+* ``` Player collision to be more accurate on larger sizes```
 * Able to use the mouse to control the player
 * Increase difficulty of game as time progresses ( more orbs? faster orbs? less positive orbs?)
 
