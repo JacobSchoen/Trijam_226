@@ -93,11 +93,19 @@ class Player extends Circle {
         //slow down
         this.xspeed *= this.friction;
       } else if (rightKey) {
-        //move right
-        this.xspeed++;
+        if (this.xpos + this.radius < window_width) {
+          //move right
+          this.xspeed++;
+        } else {
+          this.xspeed = 0;
+        }
       } else if (leftKey) {
-        //move left
-        this.xspeed--;
+        if (this.xpos - this.radius > 0) {
+          //move left
+          this.xspeed--;
+        } else {
+          this.xspeed = 0;
+        }
       }
 
       //Vertical movement
@@ -105,11 +113,19 @@ class Player extends Circle {
         //slow down
         this.yspeed *= this.friction;
       } else if (downKey) {
-        //move right
-        this.yspeed++;
+        if (this.ypos + this.radius < window_height) {
+          //move right
+          this.yspeed++;
+        } else {
+          this.yspeed = 0;
+        }
       } else if (upKey) {
-        //move left
-        this.yspeed--;
+        if (this.ypos - this.radius > 0) {
+          //move left
+          this.yspeed--;
+        } else {
+          this.yspeed = 0;
+        }
       }
 
       //Correct Speed
@@ -144,13 +160,7 @@ class Player extends Circle {
 
       //check for intersections
       for (let i = 0; i < all_circles.length; i++) {
-        let circleRect = {
-          x: all_circles[i].xpos,
-          y: all_circles[i].ypos,
-          width: all_circles[i].radius,
-          height: all_circles[i].radius,
-        };
-        if (checkIntersection(horizontalRect, circleRect)) {
+        if (this.collision(all_circles[i], player_circle)) {
           addPower(all_circles[i].power, all_circles[i].sign);
           destroyCircle(all_circles[i].power, all_circles[i].sign, i);
         }
@@ -159,5 +169,15 @@ class Player extends Circle {
       this.xpos += this.xspeed;
       this.ypos += this.yspeed;
     }
+  }
+  collision(circle1, circle2) {
+    let radii = circle1.radius + circle2.radius;
+    let distance = this.getDistance(circle1, circle2);
+    return distance < radii;
+  }
+  getDistance(circle1, circle2) {
+    let a = circle2.ypos - circle1.ypos;
+    let b = circle2.xpos - circle1.xpos;
+    return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
   }
 }

@@ -5,6 +5,7 @@ var window_width = document.getElementById("game").clientWidth;
 const ctx = canvas.getContext("2d");
 canvas.height = window_height;
 canvas.width = window_width;
+
 //create input variables
 setupInputs();
 var upKey;
@@ -80,20 +81,6 @@ function populateCircles() {
     let my_circle = new Circle(random_x, random_y, 30, 1);
     all_circles.push(my_circle);
     createCircle(all_circles[numbers]);
-  }
-}
-
-function checkIntersection(r1, r2) {
-  if (r1.x > r2.x + r2.width) {
-    return false;
-  } else if (r1.x + r1.width <= r2.x) {
-    return false;
-  } else if (r1.y >= r2.y + r2.height) {
-    return false;
-  } else if (r1.y + r1.height <= r2.y) {
-    return false;
-  } else {
-    return true;
   }
 }
 
