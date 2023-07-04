@@ -1,11 +1,15 @@
 # Trijam_226 || Math Attack
 The theme for 226 is "You gain a little, you lose a little"
+
 Source code for my entry into [TriJam226](https://itch.io/jam/trijam-226/rate/2145376)
+
 Trijam is a game jam where you have to make something playable (and fun!) in only 3 hours!
 
 # Description
 Math Attack is a simple survial minigame where you try to stay alive by collecting and dodging orbs as long as you can. 
+
 The player is a blue orb that will grow in size with its health.
+
 Your score is calculated by how long you live for. You health starts at 1 but green positive orbs give you more health while red orbs take away health.
 
 # Controls
