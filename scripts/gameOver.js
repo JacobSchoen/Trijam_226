@@ -8,7 +8,7 @@ var scene_lose = function () {
   ctx.font = "35px Grandstander";
   ctx.textAlign = "center";
   ctx.fillText(
-    `Better luck next time! ${score}`,
+    `Better luck next time! Score:${score}`,
     canvas.width / 2,
     canvas.height / 2
   );

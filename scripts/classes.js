@@ -1,11 +1,11 @@
 class Circle {
-  constructor(xpos, ypos, radius, speed) {
+  constructor(xpos, ypos, radius, speed, increaseDifficulityValue) {
     this.xpos = xpos;
     this.ypos = ypos;
     this.radius = radius;
-    this.power = randomIntFromInterval(1, 20);
+    this.power = randomIntFromInterval(1, 20) + increaseDifficulityValue;
     this.sign = randomIntFromInterval(0, 1);
-    this.speed = speed + this.power / 10;
+    this.speed = speed + this.power / 10 + increaseDifficulityValue;
     this.dx = 1 * this.speed;
     this.dy = 1 * this.speed;
   }
@@ -51,6 +51,11 @@ class Circle {
 
     this.xpos += this.dx;
     this.ypos += this.dy;
+  }
+
+  increaseSpeed(speedValue) {
+    console.log(speedValue);
+    this.speed += 0.1;
   }
 }
 

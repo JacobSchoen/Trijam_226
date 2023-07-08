@@ -78,7 +78,13 @@ function populateCircles() {
     //randomize the random number lol
     let random_x = Math.random() * window_width;
     let random_y = Math.random() * window_height;
-    let my_circle = new Circle(random_x, random_y, 30, 1);
+    let my_circle = new Circle(
+      random_x,
+      random_y,
+      30,
+      1,
+      increaseDifficulity()
+    );
     all_circles.push(my_circle);
     createCircle(all_circles[numbers]);
   }
@@ -111,4 +117,11 @@ function scoreTimer() {
     score++;
     document.querySelector("#timer").innerHTML = score;
   }
+}
+
+function increaseDifficulity() {
+  let scoreValue = score / 20;
+  if (scoreValue > 5) {
+    return Math.ceil(scoreValue / 2);
+  } else return 0;
 }
