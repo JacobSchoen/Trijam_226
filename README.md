@@ -5,6 +5,8 @@ Source code for my entry into [TriJam226](https://itch.io/jam/trijam-226/rate/21
 
 Trijam is a game jam where you have to make something playable (and fun!) in only 3 hours!
 
+Math Attack ranked [14th out of 35 submissions](https://itch.io/jam/trijam-226/rate/2145376)
+
 # Description
 Math Attack is a simple survial minigame where you try to stay alive by collecting and dodging orbs as long as you can. 
 
@@ -25,6 +27,7 @@ Use WASD or arrow keys to move your orb around the game screen
 
 * ~Player collision to be more accurate on larger sizes~
 * Able to use the mouse to control the player
+* Fix orbs spawning on edge of canvas
 * ~Increase difficulty of game as time progresses ( more orbs? faster orbs? less positive orbs?)~
 
 
